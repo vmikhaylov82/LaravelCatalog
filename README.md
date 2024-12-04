@@ -1,10 +1,10 @@
 Laravel Catalog 
 
 Используемые технологии:
-Laravel 10
-php 8.1
-Postgresql
-Docker
+Laravel 10\
+php 8.1\
+Postgresql\
+Docker\
 
 Ендпоинты:
 /     		        - вывод каталога товаров
