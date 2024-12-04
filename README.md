@@ -17,7 +17,7 @@ Docker
 тип запроса: get    
 вместо id необходимо подставить id товара (тип integer)    
 
-/api/saveComment 
+/api/saveComment   
 описание: сохранение отзыва    
 тип запроса: post    
 переменные в raw json:     	
