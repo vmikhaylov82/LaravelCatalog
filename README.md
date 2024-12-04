@@ -30,7 +30,6 @@ Docker
 5. создать миграции и сидеры:  
 	php artisan migrate  
 	php artisan db:seed  
-6. запустить проект:  
-	php artisan serve  
+6. запустить проект:    
 	перейти в браузере на localhost  
 
