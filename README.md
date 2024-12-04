@@ -7,16 +7,16 @@ Postgresql
 Docker  
   
 2. Ендпоинты для тестирования в postman:    
-/   				
+/api/     				
 описание: вывод всего каталога   
 тип запроса: get    
 
-/item/id    
+/api/item/id    
 описание: вывод отдельного товара    
 тип запроса: get    
 вместо id необходимо подставить id товара (тип integer)    
 
-/saveComment    	 	
+/api/saveComment    	 	
 описание: сохранение отзыва    
 тип запроса: post    
 переменные в raw json:     	
@@ -28,7 +28,7 @@ Docker
     "comment": "Прикольно"    
 }    
 	  
-/indexWithParams  	
+/api/indexWithParams  	
 описание: вывод каталога с параметрами фильтрации  
 тип запроса: get  
 переменные в raw json:   	 
