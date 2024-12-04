@@ -33,7 +33,7 @@
             <div class="itemShow">
                 <img src="/images/{{$data->image}}.webp" width="200px">
                 <h2>{{$data->name}}</h2>
-                <p>Диагональ экрана (дюйм): {{$data->diagonal}}</p>
+                <p>Диагональ экрана (дюйм): {{$data->diagonal}}"</p>
                 <p>Тип матрицы: {{$data->matrix}}</p>
                 <p>Цена: {{number_format($data->cost, 0, '', ' ')}}  &#8381;</p>
             </div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->integer('cost');
             $table->string('matrix');
-            $table->string('diagonal');
+            $table->float('diagonal', 8, 2);
             $table->timestamps();
         });
     }

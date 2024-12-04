@@ -42,7 +42,7 @@
                         Диагональ экрана
                         <ul class="list">
                             @foreach ($listDiagonal as $item)
-                            <li><input type="checkbox" name="diagonal[]" value="{{$item->diagonal}}" {{(isset($request->diagonal) && in_array($item->diagonal , $request->diagonal)?'checked':'')}}> {{$item->diagonal}}</li>
+                            <li><input type="checkbox" name="diagonal[]" value="{{$item->diagonal}}" {{(isset($request->diagonal) && in_array($item->diagonal , $request->diagonal)?'checked':'')}}> {{$item->diagonal}}"</li>
                             @endforeach
                         </ul>
                     </div>
