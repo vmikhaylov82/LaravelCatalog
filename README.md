@@ -18,16 +18,19 @@ Docker
 3. для отдельного товара можно создавать отзывы, которые выводятся списком на странице данного товара.
 
 Для запуска проекта необходимо:  
-1. открыть консоль, перейти в директорию docker, запустить docker-compose:  
+1. в консоле перейти в директорию, куда будет скачиваться репозиторий  
+2. скачать удаленный репозиторий   
+	git clone https://github.com/vmikhaylov82/LaravelCatalog.git  
+3. перейти в папку LaravelCatalog и запустить docker-compose  
 	docker-compose up -d  
-2. загрузить зависимости проекта:  
+4. загрузить зависимости проекта:  
 	docker exec -it php bash  
 	cd html  
 	composer install  
-3. создать миграции и сидеры:  
+5. создать миграции и сидеры:  
 	php artisan migrate  
 	php artisan db:seed  
-4. запустить проект:   
+6. запустить проект:  
 	php artisan serve  
-5. перейти в браузере на localhost
+	перейти в браузере на localhost  
 
