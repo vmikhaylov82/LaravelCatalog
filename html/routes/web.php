@@ -14,10 +14,3 @@ use App\Http\Controllers\GoodsController;
 |
 */
 
-Route::get('/', [GoodsController::class, 'index']);
-
-Route::get('/item/{id}', [GoodsController::class, 'item']);
-
-Route::post('/saveComment', [GoodsController::class, 'saveComment']);
-
-Route::get('/indexWithParams', [GoodsController::class, 'indexWithParams']);

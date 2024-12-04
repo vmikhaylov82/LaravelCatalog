@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GoodsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/', [GoodsController::class, 'index']);
+
+Route::get('/item/{id}', [GoodsController::class, 'item']);
+
+Route::post('/saveComment', [GoodsController::class, 'saveComment']);
+
+Route::get('/indexWithParams', [GoodsController::class, 'indexWithParams']);
+

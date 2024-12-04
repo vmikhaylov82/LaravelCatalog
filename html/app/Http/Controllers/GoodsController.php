@@ -22,7 +22,12 @@ class GoodsController extends Controller
         //выборка для формы характеристик - список чекбоксов "размер экрана"
         $listDiagonal = DB::table('goods')->select('diagonal')->orderBy('diagonal')->distinct()->get();
             
-        return view('index', compact('data', 'listMatrix', 'listDiagonal'));
+        //return view('index', compact('data', 'listMatrix', 'listDiagonal'));
+
+        return response()->json([
+            'status' => true,
+            'data' => $data
+        ], 200);
     }
 
     //вывод отдельного товара и комментариев
@@ -31,7 +36,13 @@ class GoodsController extends Controller
         $data = Goods::find($id);
         $comments =  DB::table('comments')->where('goods_id', '=', $data->id)->get();
 
-        return view('item', compact('data', 'comments'));
+        //return view('item', compact('data', 'comments'));
+
+        return response()->json([
+            'status' => true,
+            'data' => $data, 
+            'comments' => $comments 
+        ], 200);
     }
 
     //сохранение отзыва
@@ -42,7 +53,12 @@ class GoodsController extends Controller
         $data->comment = $request->comment;
         $data->save();
 
-        return redirect()->back();
+        //return redirect()->back();
+
+        return response()->json([
+            'status' => true,
+            'comment' => $data 
+        ], 201);
     }
 
     //вывод каталога с параметрами фильтрации
@@ -72,7 +88,12 @@ class GoodsController extends Controller
         //выборка для формы характеристик - список чекбоксов "диагональ экрана"
         $listDiagonal = DB::table('goods')->select('diagonal')->orderBy('diagonal')->distinct()->get();
             
-        return view('index', compact('data', 'request', 'listMatrix', 'listDiagonal'));
+        //return view('index', compact('data', 'request', 'listMatrix', 'listDiagonal'));
+
+        return response()->json([
+            'status' => true,
+            'data' => $data
+        ], 200);
     }
 		
 }
